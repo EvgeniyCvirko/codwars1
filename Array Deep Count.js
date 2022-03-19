@@ -1,10 +1,10 @@
 function deepCount(a){
-	
+	let count = a.length
 	for (let i = 0; i < a.length; i++) {
 		if ( Array.isArray(a[i]) === true )
-		return deepCount(a);
+		count += deepCount(a[i]);
 	} 
-	return a.length;
+	return count;
  }
- console.log(deepCount([1,2,[2,3,[0]]]));
+ console.log(deepCount([[[]], 1, [[]]]));
 
