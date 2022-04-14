@@ -7,7 +7,6 @@ function arrAdder(arr) {
 		str+=' '
 		
 return str.trim()
-
-
+	}
 }
 arrAdder(arr)
