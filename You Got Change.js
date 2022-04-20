@@ -1,0 +1,3 @@
+function giveChange(amount) {
+  
+}
