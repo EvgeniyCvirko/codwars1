@@ -1,15 +1,9 @@
 function isCoprime(x, y) {
-	let arr = []
-	let arr1 = []
-	for (let i = 1; i <= x; i++) {
-		if( x % i === 0){
-			arr.push(i)
-		}
+	const min = Math.min(x, y);
+	for (let i = 2; i <= min; i++) {
+	  if (x % i === 0 && y % i === 0) {
+		 return false;
+	  }
 	}
-	for (let j = 1; j <= y; j++) {
-		if( y % j === 0){
-			arr1.push(j)
-		}
-	}
-return arr.filter(el => arr1.indexOf(el) >0).length === 0 ? true : false 
+	return true;
  }
