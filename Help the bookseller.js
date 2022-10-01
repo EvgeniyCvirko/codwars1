@@ -24,8 +24,12 @@ for(let i = 0; i<newArr.length;i++){
 	}
 	
 }
-let x = []
 console.log(obj);
+if (Object.values(obj).every(e => e===0)){
+	return ' '
+}
+
+let x = []
 for(let key in obj){
 	x.push(`(${key} : ${obj[key]})`)
 }
@@ -33,4 +37,5 @@ return x.join(',').replace(/,/g, ' - ')
 }
  let b = ["BBAR 150", "CDXE 515", "BKWR 250", "BTSQ 890", "DRTY 600"]
  let c = ["A", "X", "R", "L"]
+ //let c = ["B", "A", "C", "D"]
  console.log(stockList(b,c));//"(A : 0) - (B : 1290) - (C : 515) - (D : 600)"
