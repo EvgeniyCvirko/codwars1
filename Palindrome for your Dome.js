@@ -1,6 +1,5 @@
 function palindrome(string) {
-	//const newString = string.replace(/[^0-9aA-zZ.]/g, '').replace(/[\s_,.,%]/g,'').toLowerCase()
-	const newString = string.replace(/[^A-Za-z0-9]/,"").toLowerCase()
+	const newString = string.replace(/[^0-9aA-zZ.]/g, '').replace(/[\s_,.,%]/g,'').toLowerCase()
 	const polindrom = newString.split("").reverse().join("").toLowerCase()
 	console.log(newString);
 	console.log(polindrom);
